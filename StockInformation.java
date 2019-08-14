@@ -11,11 +11,15 @@ import java.util.ArrayList;
 //this code will work for yahoo mostly 
 //https://www.nasdaq.com/symbol/ko/real-time
 
+//"EQUITY","symbol" for the stock ticker symbol use the .
 public class StockInformation {
+    public String price = "No data";
+     
     
-    public String price = "No data";; 
-    public static ArrayList <String> companyPrices = new ArrayList <String>();
-    //{"rvt":"MFC.TO" is vital for the stock ticker symbol use the .  
+    public void indenfityTarget (String first, String second){
+        
+    }
+   
     public String readPrice (String companyName, String website){
         try {
             URL url = new URL(website); 
@@ -48,13 +52,7 @@ public class StockInformation {
         System.out.println(price);
         return price; 
     }
+   // public String readTicker (){
 
-
-   /* public static void main (String [] args) {
-        StockInformation r = new StockInformation(); 
-        companyPrices.add(r.readPrice("TD",TD));
-        companyPrices.add(r.readPrice("Manulife",MFC));
-        companyPrices.add(r.readPrice("IDK",UTX)); 
-        System.out.println(companyPrices);
-    }*/
+   // }
 }
